@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/app.css">
+    <title>Madlibs Exercise</title>
+</head>
+<body>
+    <h1>Create your own story</h1>
+    <form action="/madlib">
+        {% for p in prompts %}
+        <p><bold>{{p}}</bold></p><input type="text" name="{{p}}">
+        {% endfor %}
+        <br>
+        <button>Read your story!</button>
+    </form>
+</body>
+</html>
